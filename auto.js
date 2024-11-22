@@ -8,7 +8,7 @@
 	// 常量：选择项和选项值
 	const options = ['猫猫养成', '修仙']
 	const optionsValue = [1, 2]
-	const intervalMinutes = 0.1 // 设置消息发送的间隔时间（分钟）
+	const intervalMinutes = 3 // 设置消息发送的间隔时间（分钟）
 
 	// 创建遮罩层背景
 	const overlay = createOverlay()
@@ -133,18 +133,20 @@
 			chatTextarea.value = msg
 			chatTextarea.dispatchEvent(inputEvent)
 			chatButton.click()
+
 			if (!msg) {
 				console.log('启动成功发送 ' + new Date(Date.now()).toLocaleTimeString())
 			} else {
 				console.log('发送成功 ' + new Date(Date.now()).toLocaleTimeString())
 			}
+
 			if (loop) {
 				setTimeout(() => sendMessage({ loop: true }), intervalMinutes * 60 * 1000)
 			}
 		}
 
 		// 初始消息发送
-		sendMessage({ loop: false, msg: '启用成功!' })
+		sendMessage({ loop: false, msg: '游戏模式启动!' })
 
 		// 在短暂延迟后开始循环发送消息
 		setTimeout(() => sendMessage({ loop: true }), 1500)
