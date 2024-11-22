@@ -1,4 +1,4 @@
-;(function () {
+(function () {
 	if (window.scriptRunning) {
 		alert('脚本已运行，请勿重复运行！')
 		return
@@ -47,4 +47,4 @@
 		alert(new Date(Date.now()).toLocaleTimeString() + ' 当前页面不是直播页面或未登录！')
 		window.scriptRunning = false
 	}
-})()
+})();
