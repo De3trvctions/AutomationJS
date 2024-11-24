@@ -46,7 +46,9 @@
 javascript:(function(){const s=document.createElement('script');s.src='https://api.allorigins.win/raw?url=%27+encodeURIComponent(%27https://raw.githubusercontent.com/De3trvctions/AutomationJS/refs/heads/main/auto.js%27);document.body.append(s);})();
 ```
 
-### 3. 选择游戏模式
+## 使用步骤(续·方法一/方法二)
+
+### 选择游戏模式
 
 1. 运行脚本后，屏幕中央会出现一个模态框。
 2. 在下拉框中选择游戏模式：
@@ -54,11 +56,11 @@ javascript:(function(){const s=document.createElement('script');s.src='https://a
    - **修仙**：将发送消息 "修炼"。
 3. 点击 **确认** 按钮，脚本开始定时发送消息。
 
-### 4. 退出脚本
+### 退出脚本
 
 - 如果需要停止脚本：
   1. 刷新页面。
-  2. 或手动清除浏览器缓存中的 `window.scriptRunning` 变量。
+  2. 或手动清除浏览器缓存中的 `window.scriptRunning = false` 变量。
 
 ---
 
