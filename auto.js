@@ -133,18 +133,14 @@
 			chatButton.click() // 点击发送按钮
 
 			// 显示间隔时间的单位（秒或分钟）
-			let intervalDisplayTime = 0
-			if (intervalMinutes > 1) {
-				intervalDisplayTime = intervalMinutes + '分钟'
-			} else {
-				intervalDisplayTime = intervalMinutes * 60 + '秒'
-			}
+			const intervalDisplayTime = intervalMinutes > 1 ? `${intervalMinutes}分钟` : `${intervalMinutes * 60}秒`
 
 			// 输出发送成功信息
-			if (!msg) {
-				console.log('启动成功发送 ' + new Date(Date.now()).toLocaleTimeString()) // 启动时发送的消息
+			const currentTime = new Date().toLocaleTimeString()
+			if (msg) {
+				console.log(`启动成功发送 ${currentTime}`) // 启动时发送的消息
 			} else {
-				console.log('发送成功 ' + new Date(Date.now()).toLocaleTimeString() + ' 间隔时间为 ' + intervalDisplayTime) // 发送的消息和时间
+				console.log(`发送成功 ${currentTime} 间隔时间为 ${intervalDisplayTime}`) // 发送的消息和时间
 			}
 
 			// 循环发送消息
